@@ -1,15 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import AdminBox from './lib/AdminBox.jsx'
+import Main from './lib/Main.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-      <AdminBox/>
+    <main>
+      <Main.Header/>
+      <Main.Body/>
+      <Main.Footer/>
+    </main>
   )
 }
 
 export default App
-
-
