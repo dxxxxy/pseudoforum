@@ -62,17 +62,25 @@
     
     #side-col-div {
         flex: 1;
-        background-color: aliceblue;
+        background-color: rgb(236, 235, 147);
+  
     }
     
     #side-col-end-div {
         flex: 2;
-        background-color: aliceblue;
+        background-color: rgb(236, 235, 147);
+        overflow: auto;
     }
     
     #footer {
         color: white;
         background-color: blue;
+        text-align: center;
+        display: flex;
+    }
+
+    #footer h1{
+      flex: 1;
     }
     
     #admin-div {
@@ -114,12 +122,18 @@
     #main-col-choice-box form {
         width: 100%;
     }
-    
-    #forum-item {
-        background-color: rgb(140, 232, 255);
+
+    label{
+      display: inline-block;
+      text-align: left;
     }
     
-    #forum-item p {
+    .forum-item {
+        background-color: rgb(140, 232, 255);
+        margin: 5px;
+    }
+    
+    #item-details, #item-title{
         border: 1px solid rgb(21, 64, 180);
         margin: 1px;
     }
@@ -127,10 +141,30 @@
     #top-of-item {
         display: flex;
     }
+
+    #top-of-item #item-title{
+      flex: 10;
+    }
+
+    #top-of-item img{
+      height: 50px;
+      flex: 1;
+    }
     
     #side-col-end-topic {
         background-color: rgb(18, 110, 110);
         overflow: auto;
+    }
+
+    td{
+      border: 1px solid black;
+    }
+
+    table tbody tr:nth-child(even){
+      background-color: turquoise;
+    }
+    table tbody tr:nth-child(odd){
+      background-color: seagreen;
     }
     
     #side-col-end-recent {
@@ -139,12 +173,24 @@
     
     #side-col-end-user {
         background-color: purple;
-        overflow: auto;
+    }
+
+    .side-col-end{
+      margin: 10px;
+      background-color: green;
+      text-align: center;
+      overflow: auto;
+      border: 2px solid black;
     }
     
     .side-col-end h1 {
         color: white;
         border: 1px solid white;
+    }
+
+    .side-col-end table{
+      width: 100%;
+      margin: auto;
     }
     
     .side-col-end table thead td {
