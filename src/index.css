@@ -60,7 +60,8 @@ main{
 #admin-div{
   display: flex;
   flex-direction: column;
-  background-color: green;
+  background-color: red;
+  border-radius: 50px;
   color: white;
 }
 
@@ -80,8 +81,37 @@ main{
   background-color: white;
 }
 
+#main-col-choice-box form{
+  display: flex;
+  flex-direction: column;
+}
+
 #main-col-forum-box{
   background-color: lightblue;
   overflow:scroll;
+}
+
+#side-col-end-topic{
+  background-color: aqua;
+}
+
+#side-col-end-recent{
+  background-color: rgb(233, 52, 67);
+}
+
+#side-col-end-user{
+  background-color: purple;
+}
+
+.side-col-end h1{
+  border: 1px solid white;
+}
+
+.side-col-end table thead td{
+  background-color: blue;
+}
+
+.side-col-end table td{
+  margin: 10px;
 }
 

@@ -1,6 +1,6 @@
 function SideColEndTopicStats () {
     return(
-        <div id="side-col-end-topic">
+        <div id="side-col-end-topic" class="side-col-end">
             <h1>Topic Stats</h1>
             <table>
                 <thead>

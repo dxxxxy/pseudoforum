@@ -1,4 +1,4 @@
-function AdminBox () {
+function SideColAdminBox () {
     return(
         <div id="admin-div">
             <p>ADMIN</p>
@@ -11,4 +11,4 @@ function AdminBox () {
     )
 }
 
-export default AdminBox
+export default SideColAdminBox

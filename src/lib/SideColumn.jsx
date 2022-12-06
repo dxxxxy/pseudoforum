@@ -1,9 +1,9 @@
-import AdminBox from "./AdminBox"
+import SideColAdminBox from "./SideColAdminBox"
 
 function SideColumn () {
     return(
         <div id="side-col-div">
-            <AdminBox/>
+            <SideColAdminBox/>
         </div>
     )
 }
