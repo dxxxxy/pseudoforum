@@ -1,17 +1,24 @@
-import AdminBox from "./AdminBox"
+import MainColumn from "./MainColumn"
+import SideColumn from "./SideColumn"
+import SideColumnEnd from "./SideColumnEnd"
 
 function Header () {
     return(
         <div id="header">
             <p>Pseudo Forum</p>
+            <form>
+                <input type="text" placeholder="search the entire forum"></input>
+            </form>
         </div>
     )
 }
 
 function Body () {
     return(
-        <div>
-            <AdminBox/>
+        <div id="body">
+            <SideColumn/>
+            <MainColumn/>
+            <SideColumnEnd/>
         </div>
     )
 }
@@ -23,6 +30,7 @@ function Footer () {
             <h1>
                 Shuya Liu 2136141/
                 Serhiy Fedurtsya 2135229/
+                Jack Hannan 2037915/
                 copy right 2022
             </h1>
         </div>
