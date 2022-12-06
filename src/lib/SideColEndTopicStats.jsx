@@ -10,7 +10,48 @@ function SideColEndTopicStats ({data}) {
                         <td>status</td>
                     </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                    <tr>
+                        <td>topic_title</td>
+                        <td>nberPost</td>
+                        <td>status</td>
+                    </tr>
+                    <tr>
+                        <td>topic_title</td>
+                        <td>nberPost</td>
+                        <td>status</td>
+                    </tr>
+                    <tr>
+                        <td>topic_title</td>
+                        <td>nberPost</td>
+                        <td>status</td>
+                    </tr>
+                    <tr>
+                        <td>topic_title</td>
+                        <td>nberPost</td>
+                        <td>status</td>
+                    </tr>
+                    <tr>
+                        <td>topic_title</td>
+                        <td>nberPost</td>
+                        <td>status</td>
+                    </tr>
+                    <tr>
+                        <td>topic_title</td>
+                        <td>nberPost</td>
+                        <td>status</td>
+                    </tr>
+                    <tr>
+                        <td>topic_title</td>
+                        <td>nberPost</td>
+                        <td>status</td>
+                    </tr>
+                    <tr>
+                        <td>topic_title</td>
+                        <td>nberPost</td>
+                        <td>status</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     )

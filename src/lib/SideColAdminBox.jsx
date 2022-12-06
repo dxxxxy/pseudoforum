@@ -2,7 +2,6 @@ function SideColAdminBox () {
     return(
         <div id="admin-div">
             <p>ADMIN</p>
-            
             <button>Create Category</button>
             <button>Create Topic</button>
             <button>Close topic</button>

@@ -20,6 +20,41 @@ function SideColEndRecent ({data}) {
                             </tr>)
                         })
                     } */}
+                                        <tr>
+                        <td>author</td>
+                        <td>date</td>
+                        <td>rate</td>
+                    </tr>
+                    <tr>
+                        <td>author</td>
+                        <td>date</td>
+                        <td>rate</td>
+                    </tr>
+                    <tr>
+                        <td>author</td>
+                        <td>date</td>
+                        <td>rate</td>
+                    </tr>
+                    <tr>
+                        <td>author</td>
+                        <td>date</td>
+                        <td>rate</td>
+                    </tr>
+                    <tr>
+                        <td>author</td>
+                        <td>date</td>
+                        <td>rate</td>
+                    </tr>
+                    <tr>
+                        <td>author</td>
+                        <td>date</td>
+                        <td>rate</td>
+                    </tr>
+                    <tr>
+                        <td>author</td>
+                        <td>date</td>
+                        <td>rate</td>
+                    </tr>
                 </tbody>
             </table>
         </div>

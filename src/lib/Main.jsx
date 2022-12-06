@@ -26,7 +26,7 @@ function Body () {
 function Footer () {
     return(
         <div id="footer">
-            <h1>Projet 2 - using react</h1>
+            <h1>Project 2 - using react</h1>
             <h1>
                 Shuya Liu 2136141/
                 Serhiy Fedurtsya 2135229/
