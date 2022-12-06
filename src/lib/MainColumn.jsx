@@ -22,7 +22,7 @@ function MainColumn () {
     return(
         <div id="main-col-div">
             <MainColChoiceBox data={data}/>
-            <MainColForumBox data={data}/>
+            <MainColForumBox data={data} category={category}/>
         </div>
     )
 }

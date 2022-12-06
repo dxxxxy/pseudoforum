@@ -19,7 +19,7 @@ function SideColEndRecent ({data}) {
                                 <td>{item.nBerPosts}</td>
                             </tr>)
                         })
-                    } */}
+                    }  */}
                 </tbody>
             </table>
         </div>

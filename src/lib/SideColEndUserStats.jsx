@@ -11,12 +11,12 @@ function SideColEndUserStats ({data}) {
                 </thead>
                 <tbody>
                     {
-                        data && data.length > 0 && data.map((item) => {
-                            return (<tr>
-                                <td>{item.user_id}</td>
-                                <td>{item.nberPosts}</td>
-                            </tr>)
-                        })
+                        // data && data.length > 0 && data.map((item) => {
+                        //     return (<tr>
+                        //         <td>{item.user_id}</td>
+                        //         <td>{item.nberPosts}</td>
+                        //     </tr>)
+                        // })
                     }
                 </tbody>
             </table>
