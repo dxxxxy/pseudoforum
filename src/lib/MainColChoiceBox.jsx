@@ -1,4 +1,4 @@
-function MainColChoiceBox () {
+function MainColChoiceBox ({data}) {
     return(
         <div id="main-col-choice-box">
             <form>

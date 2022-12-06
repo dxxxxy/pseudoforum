@@ -1,6 +1,6 @@
-function SideColEndUserStats () {
+function SideColEndUserStats ({data}) {
     return(
-        <div id="side-col-end-user" class="side-col-end">
+        <div id="side-col-end-user" className="side-col-end">
             <h1>Users Stats</h1>
             <table>
                 <thead>
@@ -9,7 +9,16 @@ function SideColEndUserStats () {
                         <td>nberPost</td>
                     </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                    {
+                        data && data.length > 0 && data.map((item) => {
+                            return (<tr>
+                                <td>{item.user_id}</td>
+                                <td>{item.nberPosts}</td>
+                            </tr>)
+                        })
+                    }
+                </tbody>
             </table>
         </div>
     )

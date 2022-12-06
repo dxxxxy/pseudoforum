@@ -2,9 +2,6 @@ import Main from './lib/Main.jsx'
 import { useEffect } from "react"
 
 function App() {
-  useEffect(() => {
-    console.log("hi")
-  }, [])
 
   return (
     <main>
