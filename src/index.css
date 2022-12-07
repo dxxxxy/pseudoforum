@@ -166,7 +166,7 @@ td {
     overflow: auto;
     border: 2px solid var(--accent-color);
     border-radius: 5px;
-    height: 300px; /* this allows it to become scrollable (overflow auto) */
+    height: 200px; /* this allows it to become scrollable (overflow auto) */
 }
 
 #choice-box form {
@@ -196,6 +196,11 @@ td {
     padding: 10px;
     font-size: 16px;
     font-weight: 500;
+}
+
+#forum-box {
+    overflow: auto;
+    height: 530px; /* this allows it to become scrollable (overflow auto) */
 }
 
 #forum-item {
