@@ -1,38 +1,36 @@
-import MainColumn from "./MainColumn"
-import SideColumn from "./SideColumn"
-import SideColumnEnd from "./SideColumnEnd"
+import MiddleColumn from "./column/middle/MiddleColumn.jsx"
+import LeftColumn from "./column/left/LeftColumn.jsx"
+import RightColumn from "./column/right/RightColumn.jsx"
+import {FaReact} from "react-icons/all";
 
-function Header () {
-    return(
+function Header() {
+    return (
         <div id="header">
-            <p>Pseudo Forum</p>
-            <form>
-                <input type="text" placeholder="search the entire forum"></input>
-            </form>
+            <p>pseudoforum&trade;</p>
+            <input type="text" placeholder="Search for content"></input>
         </div>
     )
 }
 
-function Body () {
-    return(
+function Body() {
+    return (
         <div id="body">
-            <SideColumn/>
-            <MainColumn/>
-            <SideColumnEnd/>
+            <LeftColumn/>
+            <MiddleColumn/>
+            <RightColumn/>
         </div>
     )
 }
 
-function Footer () {
-    return(
+function Footer() {
+    return (
         <div id="footer">
-            <h1>Project 2 - using react</h1>
-            <h1>
-                Shuya Liu 2136141/
-                Serhiy Fedurtsya 2135229/
-                Jack Hannan 2037915/
-                copy right 2022
-            </h1>
+            <div>
+                <FaReact id="react" />
+                <p> Project</p>
+            </div>
+            <p>Shuya Liu (2136141) | Serhiy Fedurtsya (2135229) | Jack Hannan (2037915)</p>
+            <p>&copy; 2022</p>
         </div>
     )
 }
