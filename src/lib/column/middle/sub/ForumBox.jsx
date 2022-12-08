@@ -1,29 +1,29 @@
+import { CgData } from "react-icons/cg";
 import {FaThumbsUp, FaThumbsDown, FaTrash} from "react-icons/fa";
 
-function ForumBox({data, category}) {
+function ForumBox({data, category, topic}) {//category is the index of the category, topic is the index of the topic
     console.log(data)
     return (
         <fieldset id="forum-box">
             <legend>Forum Posts</legend>
-            {/*shuya... this is an abomination{*/}
-            {/*    category.map((topicList) => {*/}
-            {/*        for(let topicCount = 0; topicCount < category.nberTopics; topicCount++){*/}
-            {/*            for(let postCount = 0; postCount < category.topicList[topicCount].nberPost; postCount++){*/}
-            {/*                let post = category.topicList[topicCount].listPosts[postCount];*/}
-            {/*                return (*/}
-            {/*                    <div id="forum-item">*/}
-            {/*                        <div id="top-of-item">*/}
-            {/*                            <p>{post.text}</p>  */}
-            {/*                            <p>likes: {post.like}</p>*/}
-            {/*                        </div>*/}
-            {/*                        <p>by:{post.author}    2022-11-10 12:10    replies:{post.replies}</p>*/}
-            {/*                    </div>*/}
-            {/*                )*/}
-            {/*            }*/}
-            {/*        }*/}
-            {/*    })*/}
-            {/*}*/}
             {
+                console.log(data[category].topicList[topic].listPosts)                    
+                        for(let postCount = 0; postCount < postList.length; postCount++){
+                            let post = postList[postCount];
+                            return (
+                                <div id="forum-item" key={postCount}>
+                                    <div id="top-of-item">
+                                        <p>{post.text}</p>  
+                                        <p>likes: {post.like}</p>
+                                    </div>
+                                    <p>by:{post.author}    2022-11-10 12:10    replies:{post.replies}</p>
+                                </div>
+                            )
+                        }
+                    
+                
+/*
+            
                 Array.from({length: 5}, (v, i) => {
                     return (<div id="forum-item">
                         <div id="item-header">
@@ -41,7 +41,9 @@ function ForumBox({data, category}) {
                     </div>)
                 })
             }
-
+*/
+        }
+        
         </fieldset>
     )
 }

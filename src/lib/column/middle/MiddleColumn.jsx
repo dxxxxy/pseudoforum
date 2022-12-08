@@ -16,15 +16,25 @@ function MiddleColumn() {
         setData(data.categories)
     }
 
+    function ChoiceBoxEvent(){
+        document.getElementsByTagName("select")[0].addEventListener("change", (e)=>{
+            alert(e.target.textContent)
+            setData(data.filter(category => category == e.target.textContent))
+            console.log(data)
+        })
+        
+    }
+
     //if it's not ready yet, return loading
     if (!data.length) {
         return <p>Loading...</p>
     }
 
     return (
+        
         <div id="middle-column">
-            <ChoiceBox data={data}/>
-            <ForumBox data={data}/>
+            <ChoiceBox data={data} event={ChoiceBoxEvent}/>
+            <ForumBox data={data} category={"1"} topic={"1"}/>
         </div>
     )
 }

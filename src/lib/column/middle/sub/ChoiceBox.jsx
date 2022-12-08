@@ -1,14 +1,14 @@
-function ChoiceBox({data}) {
+function ChoiceBox({data, event}) {
     return (
         <fieldset id="choice-box">
             <legend>Filter Posts</legend>
             <form>
                 <div>
                     <label htmlFor="firstSelect">Choose Category</label>
-                    <select name="firstSelect">
+                    <select name="firstSelect" onChange={event}>
                         <option value="1">Category 1 - Coding - Computer Science</option>
-                        <option value="2">Category 2 - Project Management</option>
-                        <option value="3">Category 3 - Communication</option>
+                        <option value="2">Category 2 - Project Management </option>
+                        <option value="3">Category 3 - Communication </option>
                     </select>
                 </div>
                 <div>
