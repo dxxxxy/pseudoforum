@@ -1,11 +1,11 @@
-import Main from './lib/Main.jsx'
+import { Header, Body, Footer } from './lib/Main.jsx'
 
 function App() {
     return (
         <main>
-            <Main.Header />
-            <Main.Body />
-            <Main.Footer />
+            <Header />
+            <Body />
+            <Footer />
         </main>
     )
 }

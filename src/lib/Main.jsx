@@ -35,10 +35,4 @@ function Footer() {
     )
 }
 
-const Main = {
-    Header,
-    Body,
-    Footer
-}
-
-export default Main 
+export { Header, Body, Footer }
