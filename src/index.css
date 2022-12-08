@@ -293,3 +293,37 @@ tbody:before {
     line-height: 5px;
     text-indent: -99999px;
 }
+
+/* responsive (show vertical on phone) */
+@media only screen and (max-width: 1280px) {
+    select {
+        width: 100px;
+    }
+
+    #header,
+    #body,
+    #footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #body {
+        gap: 30px;
+    }
+
+    #footer {
+        justify-content: center;
+        text-align: center;
+    }
+
+    #footer div {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #left-column,
+    #middle-column,
+    #right-column {
+        margin: 0;
+    }
+}
