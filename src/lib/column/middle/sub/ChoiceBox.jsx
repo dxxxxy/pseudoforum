@@ -1,4 +1,6 @@
 function ChoiceBox({data, event}) {
+    const [category, setCategory] = useState('1')
+    const [topic, setTopic] = useState('1')
     return (
         <fieldset id="choice-box">
             <legend>Filter Posts</legend>
