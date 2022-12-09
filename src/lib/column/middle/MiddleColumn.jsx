@@ -3,10 +3,14 @@ import ForumBox from "./sub/ForumBox.jsx"
 import { useState, useEffect } from "react"
 
 function MiddleColumn() {
-    const [data, setData] = useState([]);
+    const [data, setData] = useState([])
+    const [category, setCategory] = useState()
+    const [topic, setTopic] = useState()
 
     useEffect(() => {
-        getData()
+        getData(),
+        getCategory(),
+        getTopic()
     }, [])
 
     //get and set data
@@ -16,25 +20,23 @@ function MiddleColumn() {
         setData(data.categories)
     }
 
-    function ChoiceBoxEvent(){
-        document.getElementsByTagName("select")[0].addEventListener("change", (e)=>{
-            alert(e.target.textContent)
-            setData(data.filter(category => category == e.target.textContent))
-            console.log(data)
-        })
-        
+    function getCategory(e){
+        setCategory(e)
     }
 
+    function getTopic(e){
+        setTopic(e)
+    }
+    
     //if it's not ready yet, return loading
     if (!data.length) {
         return <p>Loading...</p>
     }
-
+    
     return (
-        
         <div id="middle-column">
-            <ChoiceBox data={data} event={ChoiceBoxEvent}/>
-            <ForumBox data={data} category={"1"} topic={"1"}/>
+            <ChoiceBox data={data} getCategory={getCategory} getTopic={getTopic}/>
+            <ForumBox data={data}/>
         </div>
     )
 }
