@@ -5,7 +5,11 @@ function ChoiceBox({data, category, setCategory, setTopic}) {
             <form>
                 <div>
                     <label htmlFor="firstSelect">Choose Category</label>
-                    <select name="firstSelect" onChange={(e) => setCategory(e.target.value)}>
+                    <select name="firstSelect" onChange={(e) =>
+                    {
+                        setCategory(e.target.value)
+                        setTopic(0) //reset, to first, because category 2 does not have topic 1
+                    }}>
                         {
                             data.map((cat, index) => {
                                 return (<option value={index}>{cat.name}</option>)

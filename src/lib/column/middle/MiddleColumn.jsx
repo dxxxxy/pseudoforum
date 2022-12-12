@@ -26,6 +26,12 @@ function MiddleColumn({filter}) {
         )
     }
 
+    function deletePost(id) {
+        const newData = [...data]
+        newData[category].topicList[topic].listPosts = data[category].topicList[topic].listPosts.filter((post) => post.id !== id)
+        setData(newData)
+    }
+
     //if there's a filter, filter the posts
     if (filter) {
         const filtered = data[category].topicList[topic].listPosts.filter((post) => {
@@ -38,12 +44,6 @@ function MiddleColumn({filter}) {
                 <ForumBox posts={filtered} />
             </div>
         )
-    }
-
-    function deletePost(id) {
-        const newData = [...data]
-        newData[category].topicList[topic].listPosts = data[category].topicList[topic].listPosts.filter((post) => post.id !== id)
-        setData(newData)
     }
 
     return (
