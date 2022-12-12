@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://dxxxxy.github.io/pseudoforum",
+  "homepage": "https://pforum.dreamys.studio/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
