@@ -3,20 +3,20 @@ import LeftColumn from "./column/left/LeftColumn.jsx"
 import RightColumn from "./column/right/RightColumn.jsx"
 import {FaReact} from "react-icons/all";
 
-function Header() {
+function Header({setFilter}) {
     return (
         <div id="header">
             <p>pseudoforum&trade;</p>
-            <input type="text" placeholder="Search for content"></input>
+            <input type="text" placeholder="Search for content" onChange={(e) => setFilter(e.target.value)}></input>
         </div>
     )
 }
 
-function Body() {
+function Body({filter}) {
     return (
         <div id="body">
             <LeftColumn/>
-            <MiddleColumn/>
+            <MiddleColumn filter={filter}/>
             <RightColumn/>
         </div>
     )
