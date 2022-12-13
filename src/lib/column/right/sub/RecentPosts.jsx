@@ -12,12 +12,20 @@ function RecentPosts({data}) {
                 </thead>
                 <tbody>
                     {
-                        Array.from({length: 10}, (v, i) => {
-                            return (<tr>
-                                <td>author</td>
-                                <td>date</td>
-                                <td>rate</td>
-                            </tr>)
+                        data.map(item => {
+                            let fullArray = new Array();
+                            for(let i = 0; i < item.topicList.length; i++){
+                                for(let j = 0; j < item.topicList[i].listPosts.length; j++){
+                                    //return
+                                    fullArray.push( 
+                                    (<tr>
+                                        <td>{item.topicList[i].listPosts[j].author}</td>
+                                        <td>{item.topicList[i].listPosts[j].date}</td>
+                                        <td>{item.topicList[i].listPosts[j].rate}</td>
+                                    </tr>));
+                                }
+                            }
+                            return fullArray;
                         })
                     }
                 </tbody>

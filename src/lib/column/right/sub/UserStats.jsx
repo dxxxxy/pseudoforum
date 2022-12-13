@@ -1,4 +1,6 @@
 function UserStats({data}) {
+    //sorting html
+    data.sort((a, b) => (a.nberPosts < b.nberPosts) ? 1 : -1)
     return (
         <fieldset id="user-stats">
             <legend>Users Stats</legend>
