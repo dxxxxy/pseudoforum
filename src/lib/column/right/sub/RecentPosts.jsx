@@ -31,7 +31,7 @@ function RecentPosts({data}) {
                 </tbody>
             </table>
         </fieldset>
-    )
+    )//
 }
 
 export default RecentPosts
