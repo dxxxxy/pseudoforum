@@ -1,4 +1,18 @@
 function RecentPosts({data}) {
+    //creating a topic stats object with data
+    let arrayOfPosts = new Array();
+    //categories
+    for(let i = 0; i < data.length; i++){
+        //topicList
+        for(let j = 0; j < data[i].topicList.length; j++){
+            //listPosts
+            for(let k = 0; k < data[i].topicList[j].listPosts.length; k++){
+                arrayOfPosts.push(data[i].topicList[j].listPosts[k]);
+            }
+        }
+    }
+    //sorting array
+    arrayOfPosts.sort((a, b) => (a.date < b.date) ? 1 : -1);
     return (
         <fieldset id="recent-posts">
             <legend>Recent Posts</legend>
@@ -12,26 +26,18 @@ function RecentPosts({data}) {
                 </thead>
                 <tbody>
                     {
-                        data.map(item => {
-                            let fullArray = new Array();
-                            for(let i = 0; i < item.topicList.length; i++){
-                                for(let j = 0; j < item.topicList[i].listPosts.length; j++){
-                                    //return
-                                    fullArray.push( 
-                                    (<tr>
-                                        <td>{item.topicList[i].listPosts[j].author}</td>
-                                        <td>{item.topicList[i].listPosts[j].date}</td>
-                                        <td>{item.topicList[i].listPosts[j].rate}</td>
-                                    </tr>));
-                                }
-                            }
-                            return fullArray;
+                        arrayOfPosts.map(item => {
+                            return (<tr>
+                                <td>{item.author}</td>
+                                <td>{item.date}</td>
+                                <td>{item.rate}</td>
+                            </tr>)
                         })
                     }
                 </tbody>
             </table>
         </fieldset>
-    )//
+    )
 }
 
 export default RecentPosts

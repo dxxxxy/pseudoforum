@@ -8,7 +8,6 @@ function TopicStats({data}) {
     }
     //sorting array
     arrayOfTopics.sort((a, b) => (a.nberPost < b.nberPost) ? 1 : -1);
-    console.log(arrayOfTopics);
     return (
         <fieldset id="topic-stats">
             <legend>Topic Stats</legend>
@@ -22,19 +21,13 @@ function TopicStats({data}) {
                 </thead>
                 <tbody>
                     {
-                        function createTopicData(){
-                            let fullHTML = new Array();
-                            for(let i = 0; i < arrayOfTopics.length; i++){
-                                console.log(arrayOfTopics[i].topic_title);
-                                fullHTML.push(
-                                    (<tr>
-                                        <td>{arrayOfTopics[i].topic_title}</td>
-                                        <td>{arrayOfTopics[i].nberPost}</td>
-                                        <td>{arrayOfTopics[i].status}</td>
-                                    </tr>));
-                            }
-                            return fullHTML;
-                        }
+                        arrayOfTopics.map(item => {
+                            return (<tr>
+                                <td>{item.topic_title}</td>
+                                <td>{item.nberPost}</td>
+                                <td>{item.status}</td>
+                            </tr>)
+                        })
                     }
                 </tbody>
             </table>
