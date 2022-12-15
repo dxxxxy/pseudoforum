@@ -1,20 +1,12 @@
-function RecentPosts({data}) {
-    //creating a topic stats object with data
-    let arrayOfPosts = new Array();
-    //categories
-    for(let i = 0; i < data.length; i++){
-        //topicList
-        for(let j = 0; j < data[i].topicList.length; j++){
-            //listPosts
-            for(let k = 0; k < data[i].topicList[j].listPosts.length; k++){
-                arrayOfPosts.push(data[i].topicList[j].listPosts[k]);
-            }
-        }
-    }
+function RecentPosts({ data }) {
+    //get all posts
+    const arrayOfPosts = data.flatMap(category => category.topicList.flatMap(topic => topic.listPosts))
+
     //sorting array
-    arrayOfPosts.sort((a, b) => (a.date < b.date) ? 1 : -1);
+    arrayOfPosts.sort((a, b) => b.date - a.date);
+
     return (
-        <fieldset id="recent-posts">
+        <fieldset>
             <legend>Recent Posts</legend>
             <table>
                 <thead>
@@ -26,12 +18,14 @@ function RecentPosts({data}) {
                 </thead>
                 <tbody>
                     {
-                        arrayOfPosts.map(item => {
-                            return (<tr>
-                                <td>{item.author}</td>
-                                <td>{item.date}</td>
-                                <td>{item.rate}</td>
-                            </tr>)
+                        arrayOfPosts.map((item, i) => {
+                            return (
+                                <tr key={i}>
+                                    <td>{item.author}</td>
+                                    <td>{item.date}</td>
+                                    <td>{item.rate}</td>
+                                </tr>
+                            )
                         })
                     }
                 </tbody>

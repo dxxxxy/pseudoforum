@@ -5,7 +5,7 @@ function MiscBox() {
     }
 
     return (
-        <fieldset id="misc-div">
+        <fieldset>
             <legend>Miscellaneous</legend>
             <button onClick={setRandomAccentColor}>Randomize Accent</button>
         </fieldset>

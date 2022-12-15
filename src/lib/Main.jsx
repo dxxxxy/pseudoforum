@@ -1,9 +1,9 @@
 import MiddleColumn from "./column/middle/MiddleColumn.jsx"
 import LeftColumn from "./column/left/LeftColumn.jsx"
 import RightColumn from "./column/right/RightColumn.jsx"
-import {FaReact} from "react-icons/all";
+import { FaReact } from "react-icons/all"
 
-function Header({setFilter}) {
+function Header({ setFilter }) {
     return (
         <div id="header">
             <p>pseudoforum&trade;</p>
@@ -12,7 +12,7 @@ function Header({setFilter}) {
     )
 }
 
-function Body({filter}) {
+function Body({ filter }) {
     return (
         <div id="body">
             <LeftColumn/>

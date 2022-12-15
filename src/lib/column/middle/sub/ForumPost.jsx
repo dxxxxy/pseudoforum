@@ -1,7 +1,7 @@
-import {FaThumbsDown, FaThumbsUp, FaTrash} from "react-icons/fa";
-import {useState} from "react";
+import { FaThumbsDown, FaThumbsUp, FaTrash } from "react-icons/fa"
+import { useState } from "react"
 
-function ForumPost({post, deletePost}) {
+function ForumPost({ post, deletePost }) {
     const [likes, setLikes] = useState(post.like);
 
     return (

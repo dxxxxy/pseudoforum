@@ -1,4 +1,4 @@
-function ChoiceBox({data, category, setCategory, setTopic}) {
+function ChoiceBox({ data, category, setCategory, setTopic }) {
     return (
         <fieldset id="choice-box">
             <legend>Filter Posts</legend>
@@ -12,7 +12,7 @@ function ChoiceBox({data, category, setCategory, setTopic}) {
                     }}>
                         {
                             data.map((cat, index) => {
-                                return (<option value={index}>{cat.name}</option>)
+                                return (<option key={index} value={index}>{cat.name}</option>)
                             })
                         }
                     </select>
@@ -22,7 +22,7 @@ function ChoiceBox({data, category, setCategory, setTopic}) {
                     <select name="secondSelect" onChange={(e) => setTopic(e.target.value)}>
                         {
                             data[category].topicList.map((topic, index) => {
-                                return (<option value={index}>{topic.topic_title}</option>)
+                                return (<option key={index} value={index}>{topic.topic_title}</option>)
                             })
                         }
                     </select>

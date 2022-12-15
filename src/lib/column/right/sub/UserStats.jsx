@@ -1,8 +1,9 @@
-function UserStats({data}) {
-    //sorting html
-    data.sort((a, b) => (a.nberPosts < b.nberPosts) ? 1 : -1)
+function UserStats({ data }) {
+    //sorting array
+    data.sort((a, b) => b.nberPosts - a.nberPosts)
+
     return (
-        <fieldset id="user-stats">
+        <fieldset>
             <legend>Users Stats</legend>
             <table>
                 <thead>
@@ -13,11 +14,13 @@ function UserStats({data}) {
                 </thead>
                 <tbody>
                     {
-                        data.map(item => {
-                            return (<tr>
-                                <td>{item.user_id}</td>
-                                <td>{item.nberPosts}</td>
-                            </tr>)
+                        data.map((item, i) => {
+                            return (
+                                <tr key={i}>
+                                    <td>{item.user_id}</td>
+                                    <td>{item.nberPosts}</td>
+                                </tr>
+                            )
                         })
                     }
                 </tbody>

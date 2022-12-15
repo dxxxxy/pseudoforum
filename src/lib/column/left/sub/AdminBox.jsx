@@ -1,6 +1,6 @@
 function AdminBox() {
     return (
-        <fieldset id="admin-div">
+        <fieldset>
             <legend>Admin Tools</legend>
             <button>Create Category</button>
             <button>Create Topic</button>

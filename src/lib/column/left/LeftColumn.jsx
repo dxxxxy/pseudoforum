@@ -1,5 +1,5 @@
 import AdminBox from "./sub/AdminBox.jsx"
-import MiscBox from "./sub/MiscBox.jsx";
+import MiscBox from "./sub/MiscBox.jsx"
 
 function LeftColumn() {
     return (

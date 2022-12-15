@@ -2,7 +2,7 @@ import ChoiceBox from "./sub/ChoiceBox.jsx"
 import ForumBox from "./sub/ForumBox.jsx"
 import { useState, useEffect } from "react"
 
-function MiddleColumn({filter}) {
+function MiddleColumn({ filter }) {
     const [data, setData] = useState([])
     const [category, setCategory] = useState(0)
     const [topic, setTopic] = useState(0)

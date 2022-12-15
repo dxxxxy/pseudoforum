@@ -1,5 +1,5 @@
-import { Header, Body, Footer } from './lib/Main.jsx'
-import {useState} from "react";
+import { Header, Body, Footer } from "./lib/Main.jsx"
+import { useState } from "react"
 
 function App() {
     const [filter, setFilter] = useState("")

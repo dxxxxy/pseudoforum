@@ -1,12 +1,12 @@
-import ForumPost from "./ForumPost.jsx";
+import ForumPost from "./ForumPost.jsx"
 
-function ForumBox({posts, deletePost}) {
+function ForumBox({ posts, deletePost }) {
     return (
-        <fieldset id="forum-box">
+        <fieldset>
             <legend>Forum Posts</legend>
             {
-                posts.length > 0 && posts.map((post) => {
-                    return (<ForumPost post={post} deletePost={deletePost} />)
+                posts.length > 0 && posts.map((post, i) => {
+                    return (<ForumPost key={i} post={post} deletePost={deletePost} />)
                 })
             }
         </fieldset>

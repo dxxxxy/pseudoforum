@@ -1,15 +1,12 @@
-function TopicStats({data}) {
-    //creating a topic stats object with data
-    let arrayOfTopics = new Array();
-    for(let i = 0; i < data.length; i++){
-        for(let j = 0; j < data[i].topicList.length; j++){
-            arrayOfTopics.push(data[i].topicList[j]);
-        }
-    }
+function TopicStats({ data }) {
+    //get all topics
+    const arrayOfTopics = data.flatMap(category => category.topicList)
+
     //sorting array
-    arrayOfTopics.sort((a, b) => (a.nberPost < b.nberPost) ? 1 : -1);
+    arrayOfTopics.sort((a, b) => b.nberPost - a.nberPost)
+
     return (
-        <fieldset id="topic-stats">
+        <fieldset>
             <legend>Topic Stats</legend>
             <table>
                 <thead>
@@ -21,12 +18,14 @@ function TopicStats({data}) {
                 </thead>
                 <tbody>
                     {
-                        arrayOfTopics.map(item => {
-                            return (<tr>
-                                <td>{item.topic_title}</td>
-                                <td>{item.nberPost}</td>
-                                <td>{item.status}</td>
-                            </tr>)
+                        arrayOfTopics.map((item, i) => {
+                            return (
+                                <tr key={i}>
+                                    <td>{item.topic_title}</td>
+                                    <td>{item.nberPost}</td>
+                                    <td>{item.status}</td>
+                                </tr>
+                            )
                         })
                     }
                 </tbody>
