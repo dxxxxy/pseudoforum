@@ -238,7 +238,7 @@ td {
 }
 
 #icon {
-    color: var(--bg-primary);
+    color: rgb(10, 10, 10);
     cursor: pointer;
     transition: 250ms ease-in-out;
 }
