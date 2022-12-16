@@ -6,7 +6,7 @@ function RecentPosts({ data }) {
     arrayOfPosts.sort((a, b) => b.date - a.date);
 
     return (
-        <fieldset>
+        <fieldset id="recent-posts">
             <legend>Recent Posts</legend>
             <table>
                 <thead>

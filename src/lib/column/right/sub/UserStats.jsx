@@ -3,7 +3,7 @@ function UserStats({ data }) {
     data.sort((a, b) => b.nberPosts - a.nberPosts)
 
     return (
-        <fieldset>
+        <fieldset id="user-stats">
             <legend>Users Stats</legend>
             <table>
                 <thead>

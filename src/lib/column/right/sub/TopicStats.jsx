@@ -6,7 +6,7 @@ function TopicStats({ data }) {
     arrayOfTopics.sort((a, b) => b.nberPost - a.nberPost)
 
     return (
-        <fieldset>
+        <fieldset id="topic-stats">
             <legend>Topic Stats</legend>
             <table>
                 <thead>
